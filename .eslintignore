@@ -1,2 +1,2 @@
-/block.test.js
-#/blockchain.test.js#
+/blockchain/block.test.js
+/blockchain/index.test,js

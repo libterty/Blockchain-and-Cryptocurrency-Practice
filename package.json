@@ -6,7 +6,9 @@
     "scripts": {
         "lint": "eslint --format table --fix .",
         "dev-test": "nodemon dev-test",
-        "test": "jest --watchAll"
+        "test": "jest --watchAll",
+        "start": "node ./app",
+        "dev": "nodemon ./app"
     },
     "keywords": [],
     "author": "",
@@ -15,6 +17,7 @@
         "eslint": "^6.0.0-rc.0",
         "eslint-config-prettier": "^6.1.0",
         "eslint-plugin-prettier": "^3.1.0",
+        "express": "^4.17.1",
         "jest": "^24.9.0",
         "nodemon": "^1.19.1",
         "prettier": "^1.18.2"
@@ -25,6 +28,7 @@
         "singleQuote": true
     },
     "dependencies": {
-        "crypto-js": "^3.1.9-1"
+        "crypto-js": "^3.1.9-1",
+        "ws": "^7.1.2"
     }
 }
