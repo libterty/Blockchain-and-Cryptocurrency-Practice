@@ -39,13 +39,24 @@ class P2pServer {
     // Pass the socket obj been passed in the connectSocket
     this.msgHandler(socket)
 
-    socket.send(JSON.stringify(this.blockchain.chain))
+    this.sendChain(socket)
   }
 
   msgHandler(socket) {
     socket.on('message', message => {
       const data = JSON.parse(message)
-      console.log('data', data)
+
+      this.blockchain.replaceChain(data)
+    })
+  }
+
+  sendChain(socket) {
+    socket.send(JSON.stringify(this.blockchain.chain))
+  }
+
+  syncChains() {
+    this.sockets.forEach(socket => {
+      this.sendChain(socket)
     })
   }
 }
