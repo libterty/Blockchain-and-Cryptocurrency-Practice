@@ -7,10 +7,17 @@
 // const fooBlock = Block.mineBlock(Block.genesis(), 'foo')
 // console.log(fooBlock)
 
-const Blockchain = require('./blockchain')
+/** dynamic diffcult test */
 
-const bc = new Blockchain()
+// const Blockchain = require('./blockchain')
 
-for (let i = 0; i < 10; i++) {
-  console.log(bc.addBlock(`foo${i}`).toString())
-}
+// const bc = new Blockchain()
+
+// for (let i = 0; i < 10; i++) {
+//   console.log(bc.addBlock(`foo${i}`).toString())
+// }
+
+/** Wallet test */
+const Wallet = require('./wallet')
+const wallet = new Wallet()
+console.log(wallet.toString())
