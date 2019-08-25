@@ -7,6 +7,26 @@ class Transaction {
     this.outputs = []
   }
 
+  update(senderWallet, recipient, amount) {
+    // find original sender outputs object that match sender's publicKey, than we can resubstract the amount should endup with
+    const senderOutput = this.outputs.find(
+      output => output.address === senderWallet.publicKey
+    )
+
+    if (amount > senderOutput.amount) {
+      console.log(`Amount: ${amount} exceeds balance.`)
+      return
+    }
+    // update amount
+    senderOutput.amount = senderOutput.amount - amount
+    // give output obj to the actual transaction obj
+    this.outputs.push({ amount, address: recipient })
+
+    Transaction.signTransaction(this, senderWallet)
+
+    return this
+  }
+
   static newTransaction(senderWallet, recipient, amount) {
     const transaction = new this()
 
