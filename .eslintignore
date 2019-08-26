@@ -1,3 +1,4 @@
 /blockchain/block.test.js
 /blockchain/index.test.js
-# /wallet/transaction.test.js
+/wallet/transaction.test.js
+/wallet/transaction-pool.test.js
