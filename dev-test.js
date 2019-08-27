@@ -9,15 +9,15 @@
 
 /** dynamic diffcult test */
 
-// const Blockchain = require('./blockchain')
+const Blockchain = require('./blockchain')
 
-// const bc = new Blockchain()
+const bc = new Blockchain()
 
-// for (let i = 0; i < 10; i++) {
-//   console.log(bc.addBlock(`foo${i}`).toString())
-// }
+for (let i = 0; i < 10; i++) {
+  console.log(bc.addBlock(`foo${i}`).toString())
+}
 
 /** Wallet test */
-const Wallet = require('./wallet')
-const wallet = new Wallet()
-console.log(wallet.toString())
+// const Wallet = require('./wallet');
+// const wallet = new Wallet();
+// console.log(wallet.toString());
