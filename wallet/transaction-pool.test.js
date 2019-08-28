@@ -10,8 +10,6 @@ describe('TransactionPool', () => {
     tp = new TransactionPool();
     wallet = new Wallet();
     bc = new Blockchain();
-    // transaction = Transaction.newTransaction(wallet, 'r4nd-4dr355', bc, 30)
-    // tp.updateOrAddTransaction(transaction)
     transaction = wallet.createTransaction('r4nd-4dr355', 30, bc, tp);
   });
 
